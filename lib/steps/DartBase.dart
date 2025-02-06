@@ -1,9 +1,14 @@
+import 'package:first/ClassInstance.dart';
+import 'package:first/steps/utils/DartPackage.dart';
+
 class DartBase{
   void run() {
     print('DartBase: hello world');
 
     _stepConf();
     _stepDataType();
+    _stepClassInstance();
+    _stepPackage();
   }
   void _stepConf(){
     print('_stepConf: This is step 1');
@@ -18,5 +23,13 @@ class DartBase{
     print('_stepDataType: $intVar');
     print('_stepDataType: $doubleVar');
 
+  }
+  void _stepClassInstance(){
+    ClassInstance ci = new ClassInstance();
+    ci.run();
+  }
+  void _stepPackage(){
+    DartPackage dp = new DartPackage();
+    dp.run();
   }
 }
